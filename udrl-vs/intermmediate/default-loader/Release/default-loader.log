@@ -1,0 +1,17 @@
+﻿  ReflectiveLoader.cpp
+  ReflectiveLoader.obj : 找到 MSIL .netmodule 或使用 /GL 编译的模块；正在使用 /LTCG 重新启动链接；将 /LTCG 添加到链接命令行以改进链接器性能
+  正在生成代码
+  已完成代码的生成
+  default-loader.vcxproj -> C:\Users\Administrator\Desktop\udrl\bin\default-loader\Release\x64\default-loader.x64.exe
+  
+              _      _               
+             | |    | |              
+    _   _  __| |_ __| |  _ __  _   _ 
+   | | | |/ _` | '__| | | '_ \| | | |
+   | |_| | (_| | |  | |_| |_) | |_| |
+    \__,_|\__,_|_|  |_(_) .__/ \__, |
+                        | |     __/ |
+                        |_|    |___/ 
+      
+  [+] Success: Extracted loader
+  [+] Success: Written UDRL to C:\Users\Administrator\Desktop\udrl\bin\default-loader\Release\x64\default-loader.x64.bin. Total Size: 1485 bytes

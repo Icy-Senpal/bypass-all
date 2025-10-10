@@ -1,0 +1,4 @@
+﻿cl : 命令行  warning D9025: 正在重写“/Oi”(用“/Oi-”)
+  main.c
+LINK : warning LNK4044: 无法识别的选项“/TIMESTAMP:0”；已忽略
+  ShellcodeLoader.vcxproj -> C:\Users\Administrator\Desktop\loader\x64\Release\ShellcodeLoader.exe

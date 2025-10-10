@@ -1,0 +1,15 @@
+﻿cl : 命令行  warning D9025: 正在重写“/sdl”(用“/GS-”)
+  main.c
+C:\Users\Administrator\Desktop\loader\main.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\Administrator\Desktop\loader\custom_crt.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (编译源文件“main.c”)
+  
+C:\Users\Administrator\Desktop\loader\peb.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (编译源文件“main.c”)
+  
+C:\Users\Administrator\Desktop\loader\strings.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (编译源文件“main.c”)
+  
+main.obj : error LNK2001: 无法解析的外部符号 IID_IBackgroundCopyManager
+main.obj : error LNK2001: 无法解析的外部符号 CLSID_BackgroundCopyManager
+C:\Users\Administrator\Desktop\loader\x64\Debug\ShellcodeLoader.exe : fatal error LNK1120: 2 个无法解析的外部命令
